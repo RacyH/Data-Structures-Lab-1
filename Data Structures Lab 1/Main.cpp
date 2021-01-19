@@ -242,37 +242,93 @@ void searchstudentrecords()
 		{
 		case 1: if (Student1.lettergrade[i] == grad)
 		{
-			cout << Student1.FullName << '|' << Student1.classes[i] << '|' << Student1.semester[i] << '|' << Student1.lettergrade[i] << endl;
+			if (i == 0)//This makes it so that every line doesn't have the students' full names
+			{
+				cout << Student1.FullName << '|';
+			}
+			if (i > 0)
+			{
+				cout << setw(15);
+			}
+			cout << Student1.classes[i] << '|' << Student1.semester[i] << '|' << Student1.lettergrade[i] << endl;
 		}
 			break;
 		case 2: if (Student2.lettergrade[i] == grad)
 		{
-			cout << Student2.FullName << '|' << Student2.classes[i] << '|' << Student2.semester[i] << '|' << Student2.lettergrade[i] << endl;
+			if (i == 0)
+			{
+				cout << Student2.FullName << '|';
+			}
+			if (i > 0)
+			{
+				cout << setw(15);
+			}
+				cout << Student2.classes[i] << '|' << Student2.semester[i] << '|' << Student2.lettergrade[i] << endl;
 		}
 			break;
 		case 3: if (Student3.lettergrade[i] == grad)
 		{
-			cout << Student3.FullName << '|' << Student3.classes[i] << '|' << Student3.semester[i] << '|' << Student3.lettergrade[i] << endl;
+			if (i == 0)
+			{
+				cout << Student3.FullName << '|';
+			}
+			if (i > 0)
+			{
+				cout << setw(15);
+			}
+				cout << Student3.classes[i] << '|' << Student3.semester[i] << '|' << Student3.lettergrade[i] << endl;
 		}
 			break;
 		case 4: if (Student4.lettergrade[i] == grad)
 		{
-			cout << Student4.FullName << '|' << Student4.classes[i] << '|' << Student4.semester[i] << '|' << Student4.lettergrade[i] << endl;
+			if (i == 0)
+			{
+				cout << Student4.FullName << '|';
+			}
+			if (i > 0)
+			{
+				cout << setw(15);
+			}
+			cout << Student4.classes[i] << '|' << Student4.semester[i] << '|' << Student4.lettergrade[i] << endl;
 		}
 			break;
 		case 5: if (Student5.lettergrade[i] == grad)
 		{
-			cout << Student5.FullName << '|' << Student5.classes[i] << '|' << Student5.semester[i] << '|' << Student5.lettergrade[i] << endl;
+			if (i == 0)
+			{
+				cout << Student5.FullName << '|';
+			}
+			if (i > 0)
+			{
+				cout << setw(15);
+			}
+				cout << Student5.classes[i] << '|' << Student5.semester[i] << '|' << Student5.lettergrade[i] << endl;
 		}
 			break;
 		case 6: if (Student6.lettergrade[i] == grad)
 		{
-			cout << Student6.FullName << '|' << Student6.classes[i] << '|' << Student6.semester[i] << '|' << Student6.lettergrade[i] << endl;
+			if (i == 0)
+			{
+				cout << Student6.FullName << '|';
+			}
+			if (i > 0)
+			{
+				cout << setw(15);
+			}
+				cout << Student6.classes[i] << '|' << Student6.semester[i] << '|' << Student6.lettergrade[i] << endl;
 		}
 			break;
 		case 7: if (Student7.lettergrade[i] == grad)
 		{
-			cout << Student7.FullName << '|' << Student7.classes[i] << '|' << Student7.semester[i] << '|' << Student7.lettergrade[i] << endl;
+			if (i == 0)
+			{
+				cout << Student7.FullName << '|';
+			}
+			if (i > 0)
+			{
+				cout << setw(15);
+			}
+				cout << Student7.classes[i] << '|' << Student7.semester[i] << '|' << Student7.lettergrade[i] << endl;
 		}
 			break;
 		default: break;
@@ -310,65 +366,65 @@ void showstudents(int& x)
 {
 	int r;
 	bool valid = false;
-	cout << "Students that do not have any data saved in them will have 0's within their data, as the\ncomputer tries to calculate their GPA.\n";
+	cout << "Students that do not have any data saved in them will have 0's within their data, as the\ncomputer tries to calculate their GPA and has 0 set as their ID.\n";
 	cout << "|  Name  |  ID  |  GPA  |  Class  |  Semester  |  Grade\n";
 
 	if (x == 1)
 	{
-		cout << Student1.GetStudentName() << '\t' << Student1.GetStudentID() << '\t' << Student1.GetGPA();
+		cout << Student1.GetStudentName() << setw(8) << Student1.GetStudentID() << setw(8) << Student1.GetGPA();
 		Student1.GetStudentClassesGradesSemester();
 	}
 
 	if (x == 2)
 	{
-		cout << Student2.GetStudentName() << '\t' << Student2.GetStudentID() << '\t' << Student2.GetGPA();
+		cout << Student2.GetStudentName() << setw(8) << Student2.GetStudentID() << setw(8) << Student2.GetGPA();
 		Student2.GetStudentClassesGradesSemester();
 	}
 
 	if (x == 3)
 	{
-		cout << Student3.GetStudentName() << '\t' << Student3.GetStudentID() << '\t' << Student3.GetGPA();
+		cout << Student3.GetStudentName() << setw(8) << Student3.GetStudentID() << setw(8) << Student3.GetGPA();
 		Student3.GetStudentClassesGradesSemester();
 	}
 
 	if (x == 4)
 	{
-		cout << Student4.GetStudentName() << '\t' << Student4.GetStudentID() << '\t' << Student4.GetGPA();
+		cout << Student4.GetStudentName() << setw(8) << Student4.GetStudentID() << setw(8) << Student4.GetGPA();
 		Student4.GetStudentClassesGradesSemester();
 	}
 
 	if (x == 5)
 	{
-		cout << Student5.GetStudentName() << '\t' << Student5.GetStudentID() << '\t' << Student5.GetGPA();
+		cout << Student5.GetStudentName() << setw(8) << Student5.GetStudentID() << setw(8) << Student5.GetGPA();
 		Student5.GetStudentClassesGradesSemester();
 	}
 
 	if (x == 6)
 	{
-		cout << Student6.GetStudentName() << '\t' << Student6.GetStudentID() << '\t' << Student6.GetGPA();
+		cout << Student6.GetStudentName() << setw(8) << Student6.GetStudentID() << setw(8) << Student6.GetGPA();
 		Student6.GetStudentClassesGradesSemester();
 	}
 
 	if (x == 7)
 	{
-		cout << Student7.GetStudentName() << '\t' << Student7.GetStudentID() << '\t' << Student7.GetGPA();
+		cout << Student7.GetStudentName() << setw(8) << Student7.GetStudentID() << setw(8) << Student7.GetGPA();
 		Student7.GetStudentClassesGradesSemester();
 	}
 	if (x == 8)//Displays all students and their associated data.
 	{
-		cout << Student1.GetStudentName() << '\t' << Student1.GetStudentID() << '\t' << Student1.GetGPA();
+		cout << Student1.GetStudentName() << setw(8) << Student1.GetStudentID() << setw(8) << Student1.GetGPA();
 		Student1.GetStudentClassesGradesSemester();
-		cout << Student2.GetStudentName() << '\t' << Student2.GetStudentID() << '\t' << Student2.GetGPA();
+		cout << Student2.GetStudentName() << setw(8) << Student2.GetStudentID() << setw(8) << Student2.GetGPA();
 		Student2.GetStudentClassesGradesSemester();
-		cout << Student3.GetStudentName() << '\t' << Student3.GetStudentID() << '\t' << Student3.GetGPA();
+		cout << Student3.GetStudentName() << setw(8) << Student3.GetStudentID() << setw(8) << Student3.GetGPA();
 		Student3.GetStudentClassesGradesSemester();
-		cout << Student4.GetStudentName() << '\t' << Student4.GetStudentID() << '\t' << Student4.GetGPA();
+		cout << Student4.GetStudentName() << setw(8) << Student4.GetStudentID() << setw(8) << Student4.GetGPA();
 		Student4.GetStudentClassesGradesSemester();
-		cout << Student5.GetStudentName() << '\t' << Student5.GetStudentID() << '\t' << Student5.GetGPA();
+		cout << Student5.GetStudentName() << setw(8) << Student5.GetStudentID() << setw(8) << Student5.GetGPA();
 		Student5.GetStudentClassesGradesSemester();
-		cout << Student6.GetStudentName() << '\t' << Student6.GetStudentID() << '\t' << Student6.GetGPA();
+		cout << Student6.GetStudentName() << setw(8) << Student6.GetStudentID() << setw(8) << Student6.GetGPA();
 		Student6.GetStudentClassesGradesSemester();
-		cout << Student7.GetStudentName() << '\t' << Student7.GetStudentID() << '\t' << Student7.GetGPA();
+		cout << Student7.GetStudentName() << setw(8) << Student7.GetStudentID() << setw(8) << Student7.GetGPA();
 		Student7.GetStudentClassesGradesSemester();
 	}
 	cout << "Press E to exit back to the menu.\n";

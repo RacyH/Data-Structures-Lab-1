@@ -85,9 +85,14 @@ void Student::SetStudentID()
 *
 ***********************/
 void Student::GetStudentClassesGradesSemester()
-{//come back to this
+{
 	for (int i = 0; i < 100; i++)
 	{
+		if(i > 0)//This makes it so that names of the class, the semester and the grade aren't bunched up towards the front under
+			//the headers for name, id, and gpa
+		{
+			cout << setw(18);
+		}
 		cout << '\t' << Student::classes[i] << '\t' << Student::semester[i]  << '\t' << Student::lettergrade[i] << endl;
 		if (Student::semester[i] == "")
 		{
